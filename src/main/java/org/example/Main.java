@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.List;
 
-// Implement methods to add and delete books from the library.
+
 public class Main {
     public static void main(String[] args) {
         Book newBook = new Book("some title5", "some author7", "11111111121");

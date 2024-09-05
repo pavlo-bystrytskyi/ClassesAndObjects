@@ -1,24 +1,21 @@
 package org.example;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class Library {
-     ArrayList<Book> books;
+    ArrayList<Book> books;
 
     Library(ArrayList<Book> books) {
         this.books = books;
     }
 
-    public ArrayList<Book>  getBooks() {
+    public ArrayList<Book> getBooks() {
         return books;
     }
 
     public void addBook(Book book) {
         books.add(book);
     }
-
 
 
     public void removeBook(Book book) {
