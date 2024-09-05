@@ -1,5 +1,6 @@
 package org.example;
 
+import java.util.List;
 
 //Step 1: Create a class 'Book' with the properties 'title', 'author', and 'isbn'. Implement getter and setter methods for these properties.
 //
@@ -11,25 +12,28 @@ package org.example;
 //
 //Step 5: Create an instance of the 'Library' class with an array of 'Book' objects. Print the library information to the console.
 
+import java.util.ArrayList;
+import java.util.List;
+
 // Implement methods to add and delete books from the library.
 public class Main {
     public static void main(String[] args) {
+        Book newBook = new Book("some title5", "some author7", "11111111121");
         Library library = new Library(
-                new Book[]{
-                        new Book("some title1", "some author3", "1111111111"),
+                new ArrayList<>(List.of(new Book("some title1", "some author3", "1111111111"),
                         new Book("some title2", "some author3", "1111111112"),
                         new Book("some title3", "some author3", "1111111113")
-                }
-        );
+                )));
+
         System.out.println("Default library");
         System.out.println(library);
-        library.addBook(new Book("some title4", "some author4", "1111111114"));
+        library.addBook(newBook);
         System.out.println("Updated library");
         System.out.println(library);
-        library.removeBookByIsbn("1111111112");
+        library.removeBook(newBook);
         System.out.println("Library after removal");
         System.out.println(library);
-        library.removeBookByIsbn("1111111112a");
+        library.removeBook(newBook);
         System.out.println("Library after non-existing book removal");
         System.out.println(library);
     }
