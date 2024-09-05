@@ -21,7 +21,16 @@ public class Main {
                         new Book("some title3", "some author3", "1111111113")
                 }
         );
-
+        System.out.println("Default library");
+        System.out.println(library);
+        library.addBook(new Book("some title4", "some author4", "1111111114"));
+        System.out.println("Updated library");
+        System.out.println(library);
+        library.removeBookByIsbn("1111111112");
+        System.out.println("Library after removal");
+        System.out.println(library);
+        library.removeBookByIsbn("1111111112a");
+        System.out.println("Library after non-existing book removal");
         System.out.println(library);
     }
 }
